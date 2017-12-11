@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: jmeter
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: jmeter
+    spec:
+      containers:
+        - name: jmeter
+          image: registry.eu-gb.bluemix.net/evrim/jmeter
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: "100m"
+            limits:
+              cpu: "200m"
