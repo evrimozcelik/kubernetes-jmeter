@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
         - name: jmeter
-          image: registry.eu-gb.bluemix.net/evrim/jmeter
+          image: registry.eu-gb.bluemix.net/evrim/jmeter # replace with your docker image name
           imagePullPolicy: Always
           resources:
             requests:
